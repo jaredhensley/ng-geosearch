@@ -1,6 +1,6 @@
 angular.module('myApp').directive('mainDirective', function () {
   return {
-    templateUrl: '/templates/resultTmpl.html',
+    templateUrl: '/ng-geosearch/templates/resultTmpl.html',
     replace: true
 
 
