@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>api mashup</title>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,600,300italic' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body ng-app="myApp">
+
+  <header>
+    <h1>Angular-Instagram Geosearch</h1>
+  </header>
+
+  <div ng-controller="mainCtrl">
+    <div class="center">
+      <form class="input-form">
+        <input type="text" placeholder="enter a location...">
+      </form>
+      <div class="results" ng-repeat="data in datas">
+        <main-directive></main-directive>
+      </div>
+    </div>
+  </div>
+
+
+  <!--------- SCRIPTS --------->
+
+  <!--ANGULAR.JS 1.4.7 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js"></script>
+  <!--ANGULAR UI ROUTER -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/controllers/mainCtrl.js"></script>
+  <script src="js/services/mainService.js"></script>
+  <script src="js/directives/mainDirective.js"></script>
+</body>
+
+</html>
