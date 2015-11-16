@@ -17,11 +17,15 @@
     <h1>Angular-Instagram Geosearch</h1>
   </header>
 
+
+
   <div ng-controller="mainCtrl">
     <div class="center">
       <form class="input-form">
-        <input type="text" placeholder="enter a location...">
+        <input type="text" placeholder="enter a location..." ng-model="address">
+        <button type="submit" ng-click="geocodeAddress()">submit</button>
       </form>
+      <div id='location-canvas'></div>
       <div class="results" ng-repeat="data in datas">
         <main-directive></main-directive>
       </div>
@@ -39,6 +43,8 @@
   <script src="js/controllers/mainCtrl.js"></script>
   <script src="js/services/mainService.js"></script>
   <script src="js/directives/mainDirective.js"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDRyhKqRal_lapY1gjdU3I4LbTdEGRDyS0&callback=initMap"></script>
+
 </body>
 
 </html>
