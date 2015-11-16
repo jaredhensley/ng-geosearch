@@ -5,7 +5,7 @@ angular.module('myApp').service('mainService', function ($http) {
     long: -74.006
   }
 
-  this.makeSearch = function () {
+  this.makeSearch = function (address) {
 
     return $http({
       method: 'JSONP',
