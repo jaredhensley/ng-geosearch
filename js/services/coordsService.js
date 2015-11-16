@@ -1,10 +1,8 @@
 angular.module('myApp').service('coordsService', function ($q) {
 
-  this.something = function (searchTerm) {
-
+  this.something = function (searchTerm, map) {
     var dfd = $q.defer();
     var geocoder = new google.maps.Geocoder();
-    console.log(geocoder);
 
     function geocodeAddress() {
 
@@ -14,9 +12,22 @@ angular.module('myApp').service('coordsService', function ($q) {
 
         if (status === google.maps.GeocoderStatus.OK) {
           newAddress = results[0].geometry.location;
-          dfd.resolve({
+
+          var point = {
             lat: newAddress.lat(),
             lng: newAddress.lng()
+
+          }
+
+          var marker = new google.maps.Marker({
+            map: map,
+            position: point
+          });
+
+
+          dfd.resolve({
+            lat: newAddress.lat(),
+            lng: newAddress.lng(),
           });
 
         } else {
@@ -27,8 +38,9 @@ angular.module('myApp').service('coordsService', function ($q) {
 
     };
 
-    geocodeAddress();
-    return dfd.promise;
+    geocodeAddress(); //initiate geocodeAddress
+    return dfd.promise; //return custom promise
 
   }
+
 });

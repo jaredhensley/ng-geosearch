@@ -1,4 +1,4 @@
-angular.module('myApp').controller('mainCtrl', function ($scope, mainService, coordsService) {
+angular.module('myApp').controller('mainCtrl', function ($scope, mainService, coordsService, markersService) {
 
 
   //MAP OPTIONS FOR NEW MAP INSTANCE
@@ -15,9 +15,8 @@ angular.module('myApp').controller('mainCtrl', function ($scope, mainService, co
   $scope.getResults = function (address) {
 
     mainService.makeSearch(address).then(function (results) {
-
       $scope.datas = results;
-      console.log('in the controller', $scope.datas);
+      $scope.populateMarkers();
     });
 
   }
@@ -25,16 +24,18 @@ angular.module('myApp').controller('mainCtrl', function ($scope, mainService, co
   //GOOGLE MAP LOCATION API CALL
   $scope.getCoords = function (searchTerm) {
 
-    coordsService.something(searchTerm).then(function (response) {
-      console.log(response, response.lat());
+    coordsService.something(searchTerm, $scope.map).then(function (response) {
 
       $scope.map.setCenter(response);
       $scope.getResults(response);
+    });
 
-    })
+  }
 
-
-
+  //POPULATE MAP WITH MARKERS
+  $scope.populateMarkers = function () {
+    console.log($scope.datas)
+    markersService.populateMap($scope.datas, $scope.map);
   }
 
 
