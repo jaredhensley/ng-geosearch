@@ -16,7 +16,6 @@ angular.module('myApp').service('coordsService', function ($q) {
           var point = {
             lat: newAddress.lat(),
             lng: newAddress.lng()
-
           }
 
           var marker = new google.maps.Marker({

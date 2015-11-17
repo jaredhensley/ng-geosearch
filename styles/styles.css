@@ -24,6 +24,7 @@
   
   body {
     font-family: 'Open Sans';
+    background-image: url('../images/billie_holiday.png');
   }
   /*---HEADER STYLES---*/
   
@@ -66,6 +67,7 @@
   /*---MAP STYLES---*/
   
   #location-canvas {
+    border: 3px solid #50514F;
     margin: 20px 0;
     height: 400px;
   }
@@ -85,7 +87,7 @@
     width: 32%;
     min-width: 300px;
     height: auto;
-    border: 1px solid #50514F;
+    border: 3px solid #50514F;
     margin: 5px;
     display: inline-block;
     border-radius: 5px;
