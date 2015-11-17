@@ -18,7 +18,7 @@ angular.module('myApp').directive('mainDirective', function ($uibModal) {
             }
           },
           templateUrl: 'templates/modal.html',
-          size: 'sm'
+          size: 'lg'
         });
       });
 
