@@ -1,11 +1,12 @@
-angular.module('myApp').controller('mainCtrl', function ($scope, mainService, coordsService, markersService) {
+angular.module('myApp').controller('mainCtrl', function ($scope, $uibModal, mainService, coordsService, markersService) {
 
+  console.log($uibModal);
 
   //MAP OPTIONS FOR NEW MAP INSTANCE
   $scope.mapOptions = {
-    zoom: 8,
+    zoom: 15,
     center: new google.maps.LatLng(41.923, 12.513),
-    mapTypeId: google.maps.MapTypeId.TERRAIN
+    mapTypeId: google.maps.MapTypeId.ROADMAP
   }
 
   $scope.map = new google.maps.Map(document.getElementById('location-canvas'), $scope.mapOptions);

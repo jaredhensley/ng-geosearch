@@ -26,6 +26,14 @@
     font-family: 'Open Sans';
     background-image: url('../images/billie_holiday.png');
   }
+  /*--RESETS FOR MODAL INJECTION--*/
+  
+  .nav,
+  .pagination,
+  .carousel,
+  .panel-title a {
+    cursor: pointer;
+  }
   /*---HEADER STYLES---*/
   
   header {
@@ -162,6 +170,11 @@
   }
   
   div.result-image > img {
+    width: 100%;
+  }
+  
+  #street-canvas {
+    height: 100%;
     width: 100%;
   }
   /*---MEDIA QUERIES---*/
