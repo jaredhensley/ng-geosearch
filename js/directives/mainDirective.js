@@ -1,5 +1,5 @@
 angular.module('myApp').directive('mainDirective', function ($uibModal) {
-  console.log('test1', $uibModal);
+
   return {
     templateUrl: 'templates/resultTmpl.html',
     replace: true,
@@ -12,9 +12,6 @@ angular.module('myApp').directive('mainDirective', function ($uibModal) {
           resolve: {
             data: function () {
               return scope.data;
-            },
-            test: function () {
-              return "this is a test";
             }
           },
           templateUrl: 'templates/modal.html',

@@ -4,14 +4,15 @@
   <div class="modal-right">
     <div class="modal-right-top">
       <div class="modal-right-top-left">
-        <a href="{{data.link}}" target="_blank"><img src="{{data.images.low_resolution.url}}" alt=""></a>
+        <a href="{{data.link}}" target="_blank"><img ng-src="{{data.images.low_resolution.url}}" alt=""></a>
       </div>
       <div class="modal-right-top-right">
         <div class="modal-right-top-right-top">
-          modal-right-top-right-top
+          {{data.created_time * 1000 | date}}
         </div>
         <div class="modal-right-top-right-bottom">
-          modal-right-top-right-bottom
+          <div ng-repeat="comment in comments"></div>
+          test {{comment.text}} test {{comment}}
         </div>
       </div>
     </div>

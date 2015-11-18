@@ -1,9 +1,8 @@
 angular.module('myApp').controller('modalCtrl', function ($scope, data) {
 
   $scope.data = data;
-  console.log(data);
-  console.log(data.location.latitude);
-  console.log(data.location.longitude);
+  $scope.comments = data.comments.data;
+  console.log($scope.comments);
 
   setTimeout(function () {
 

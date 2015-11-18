@@ -183,6 +183,10 @@
   }
   /*---MODAL STYLES---*/
   
+  .modal {
+    top: 10%;
+  }
+  
   .modal-right {
     float: right;
     height: 400px;
