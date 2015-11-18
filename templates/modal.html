@@ -8,16 +8,37 @@
       </div>
       <div class="modal-right-top-right">
         <div class="modal-right-top-right-top">
-          {{data.created_time * 1000 | date}}
+          <div class="info">
+
+            {{data.created_time * 1000 | date}} {{data.caption.from.username}}
+          </div>
+          <div class="poster">
+            <div class="poster-img">
+              <img src="{{data.caption.from.profile_picture}}" alt="">
+            </div>
+          </div>
         </div>
         <div class="modal-right-top-right-bottom">
-          <div ng-repeat="comment in comments"></div>
-          test {{comment.text}} test {{comment}}
+          {{data.caption.text}}
         </div>
       </div>
     </div>
     <div class="modal-right-bottom">
-      modal-right-bottom
+      <div ng-repeat="comment in comments">
+        <div class="comment">
+          <div class="user">
+            <div class="username">
+              {{comment.from.username}}
+            </div>
+            <br>
+            <img src="{{comment.from.profile_picture}}" alt="">
+          </div>
+          <div class="text">
+            {{comment.text}}
+          </div>
+        </div>
+
+      </div>
     </div>
   </div>
 

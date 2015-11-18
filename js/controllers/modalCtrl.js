@@ -1,8 +1,10 @@
 angular.module('myApp').controller('modalCtrl', function ($scope, data) {
 
   $scope.data = data;
+  console.log($scope.data);
   $scope.comments = data.comments.data;
   console.log($scope.comments);
+
 
   setTimeout(function () {
 
