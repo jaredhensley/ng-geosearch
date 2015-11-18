@@ -79,6 +79,15 @@
     margin: 20px 0;
     height: 400px;
   }
+  
+  #street-canvas {
+    height: 400px;
+    width: 50%;
+    float: left;
+    border-bottom: 3px solid black;
+    border-top: 3px solid black;
+    border-left: 3px solid black;
+  }
   /*---RESULT DIRECTIVE TEMPLATE STYLES---*/
   
   #test-button {
@@ -172,10 +181,55 @@
   div.result-image > img {
     width: 100%;
   }
+  /*---MODAL STYLES---*/
   
-  #street-canvas {
+  .modal-right {
+    float: right;
+    height: 400px;
+    width: 50%;
+    background-color: white;
+  }
+  
+  .modal-right-top {
+    height: 200px;
+  }
+  
+  .modal-right-top-left {
+    width: 50%;
+    height: 200px;
+    float: left;
+  }
+  
+  .modal-right-top-left img {
     height: 100%;
     width: 100%;
+    border: 3px solid black;
+  }
+  
+  .modal-right-top-right {
+    width: 50%;
+    height: 200px;
+    float: right;
+  }
+  
+  .modal-right-top-right-top {
+    height: 100px;
+    border-top: 3px solid black;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+  }
+  
+  .modal-right-top-right-bottom {
+    height: 100px;
+    border-bottom: 3px solid black;
+    border-right: 3px solid black;
+  }
+  
+  .modal-right-bottom {
+    height: 200px;
+    border-bottom: 3px solid black;
+    border-right: 3px solid black;
+    border-left: 3px solid black;
   }
   /*---MEDIA QUERIES---*/
   
