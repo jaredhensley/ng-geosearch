@@ -12,8 +12,9 @@
   <link rel="stylesheet" href="styles/styles.css">
 </head>
 
-<body ng-app="myApp">
-
+<body ng-app="myApp" ng-controller="alphaMaleCtrl">
+  {{user}}
+  <div ng-show="user">test</div>
   <header ng-controller="headerCtrl">
     <h1>ng-Geosearch</h1>
     <button id="sign-up" ui-sref="sign-up">Register</button>
@@ -21,9 +22,6 @@
     <button id="logout" ui-sref="log-out">log out</button>
 
   </header>
-
-
-
 
 
   <ui-view></ui-view>
@@ -48,6 +46,7 @@
   <script src="js/controllers/modalCtrl.js"></script>
   <script src="js/controllers/favCtrl.js"></script>
   <script src="js/controllers/searchCtrl.js"></script>
+  <script src="js/controllers/alphaMaleCtrl.js"></script>
   <script src="js/controllers/headerCtrl.js"></script>
   <script src="js/controllers/signinCtrl.js"></script>
   <script src="js/controllers/signupCtrl.js"></script>

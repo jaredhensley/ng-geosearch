@@ -2,14 +2,17 @@ angular.module('myApp').service('fbService', function ($firebaseArray, $firebase
 
   var baseUrl = 'https://ng-geosearch.firebaseio.com/'
   var ref = new Firebase(baseUrl);
-  var usersUrl = baseUrl + '/users/';
-  var usersRef = new Firebase(baseUrl + '/users/');
+
 
   var authObj = $firebaseAuth(ref);
 
-  var users = $firebaseObject(usersRef);
+
 
   var loggedInUserRef;
+
+  this.getAuthObj = function () {
+    return authObj;
+  }
 
   this.login = function (userObj) {
 
@@ -25,13 +28,11 @@ angular.module('myApp').service('fbService', function ($firebaseArray, $firebase
   this.register = function (userObj) {
     authObj.$createUser(userObj).then(function (userData) {
 
-      var newRef = usersUrl + userData.uid;
-      console.log(newRef);
-      var newUser = new Firebase(newRef);
-      newUser.set({
-        email: userData.email
-      });
-
+      var usersRef = new Firebase(baseUrl + 'users/' + userData.uid);
+      var newUser = $firebaseObject(usersRef);
+      newUser.email = userObj.email;
+      newUser.uid = userData.uid;
+      newUser.$save();
       authObj.$authWithPassword(userObj).then(function (response) {
         console.log(response);
       })

@@ -39,5 +39,13 @@ angular.module('myApp').controller('mainCtrl', function ($scope, $uibModal, main
     markersService.populateMap($scope.datas, $scope.map);
   }
 
+  $scope.addFav = function (url) {
+
+    $scope.images.$add({
+      url: url
+    });
+  }
+
+
 
 })

@@ -5,6 +5,14 @@ angular.module('myApp').controller('modalCtrl', function ($scope, data) {
   $scope.comments = data.comments.data;
   console.log($scope.comments);
 
+  $scope.addFav = function (url) {
+
+    $scope.images.$add({
+      url: url
+    });
+  }
+
+  console.log($scope.user)
 
   setTimeout(function () {
 
