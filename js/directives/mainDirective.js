@@ -4,6 +4,7 @@ angular.module('myApp').directive('mainDirective', function ($uibModal) {
     templateUrl: 'templates/resultTmpl.html',
     replace: true,
     link: function (scope, elem, attrs) {
+      console.log(scope.data);
       elem.on('click', function () {
         elem.css('opacity', '.5');
         var modalInstance = $uibModal.open({

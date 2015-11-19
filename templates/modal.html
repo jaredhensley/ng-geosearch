@@ -11,8 +11,9 @@
           {{data.created_time * 1000 | date}}
         </div>
         <div class="modal-right-top-right-bottom">
-          <div ng-repeat="comment in comments"></div>
-          test {{comment.text}} test {{comment}}
+          <div ng-repeat="comment in comments">
+            test {{comment.text}} test {{comment}}
+          </div>
         </div>
       </div>
     </div>

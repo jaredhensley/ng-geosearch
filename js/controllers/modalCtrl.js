@@ -5,7 +5,7 @@ angular.module('myApp').controller('modalCtrl', function ($scope, data) {
   console.log($scope.comments);
 
   setTimeout(function () {
-
+  
     var map = new google.maps.Map(document.getElementById('street-canvas'), {});
 
     var panorama = new google.maps.StreetViewPanorama(
