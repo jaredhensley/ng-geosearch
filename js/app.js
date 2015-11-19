@@ -10,7 +10,7 @@ angular.module('myApp', ['ui.router', 'ui.bootstrap', 'firebase'])
 
       url: '/',
       templateUrl: 'templates/homeTmpl.html',
-      controller: 'mainCtrl',
+      controller: 'mainCtrl'
 
     })
     .state('favorites', {

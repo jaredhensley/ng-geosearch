@@ -15,6 +15,7 @@ angular.module('myApp').controller('alphaMaleCtrl', function ($scope, fbService,
       $scope.user.$loaded().then(function (res) {
         var imageRef = new Firebase(baseUrl + 'users/' + $scope.user.id + '/images');
         $scope.images = $firebaseArray(imageRef);
+        console.log($scope.images);
       });
 
     } else {
