@@ -14,12 +14,13 @@ angular.module('myApp').directive('mainDirective', function ($uibModal) {
         var modalInstance = $uibModal.open({
           animation: scope.animationsEnabled,
           controller: 'modalCtrl',
+          scope: scope,
           /*windowClass: 'large-Modal',*/
-          resolve: {
-            data: function () {
-              return scope.data;
-            }
-          },
+          // resolve: {
+          //   data: function () {
+          //     return scope.data;
+          //   }
+          // },
           templateUrl: 'templates/modal.html',
           size: 'lg'
         });

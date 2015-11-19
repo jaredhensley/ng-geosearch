@@ -1,12 +1,11 @@
-angular.module('myApp').controller('modalCtrl', function ($scope, data) {
+angular.module('myApp').controller('modalCtrl', function ($scope) {
 
-  $scope.data = data;
-  console.log($scope.data);
-  $scope.comments = data.comments.data;
-  console.log($scope.comments);
+  $scope.comments = $scope.data.comments.data;
 
 
-  console.log($scope.user)
+  $scope.testeThing = function(thing) {
+    console.log('thing', thing);
+  };
 
   setTimeout(function () {
 
@@ -15,8 +14,8 @@ angular.module('myApp').controller('modalCtrl', function ($scope, data) {
     var panorama = new google.maps.StreetViewPanorama(
       document.getElementById('street-canvas'), {
         position: {
-          lat: data.location.latitude,
-          lng: data.location.longitude
+          lat: $scope.data.location.latitude,
+          lng: $scope.data.location.longitude
         },
         pov: {
           heading: 34,
