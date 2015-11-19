@@ -1,6 +1,5 @@
 angular.module('myApp').controller('mainCtrl', function ($scope, $uibModal, mainService, coordsService, markersService) {
 
-  console.log($uibModal);
 
   //MAP OPTIONS FOR NEW MAP INSTANCE
   $scope.mapOptions = {
@@ -35,11 +34,8 @@ angular.module('myApp').controller('mainCtrl', function ($scope, $uibModal, main
 
   //POPULATE MAP WITH MARKERS
   $scope.populateMarkers = function () {
-    console.log($scope.datas)
     markersService.populateMap($scope.datas, $scope.map);
   }
-
-  console.log($scope.images);
 
   $scope.addFav = function (url) {
     console.log($scope.images);
