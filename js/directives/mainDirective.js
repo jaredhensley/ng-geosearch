@@ -14,6 +14,7 @@ angular.module('myApp').directive('mainDirective', function ($uibModal) {
         var modalInstance = $uibModal.open({
           animation: scope.animationsEnabled,
           controller: 'modalCtrl',
+          /*windowClass: 'large-Modal',*/
           resolve: {
             data: function () {
               return scope.data;

@@ -66,6 +66,12 @@ angular.module('myApp').service('fbService', function ($firebaseArray, $firebase
 
   }
 
+  this.getImages = function (userId) {
+
+
+
+  }
+
 
 
 
