@@ -12,7 +12,7 @@ angular.module('myApp').controller('alphaMaleCtrl', function ($scope, fbService,
       var userRef = new Firebase(baseUrl + 'users/' + user.uid);
       $scope.user = $firebaseObject(userRef);
       $scope.user.$loaded().then(function (res) {
-        var imageRef = new Firebase(baseUrl + 'users/' + $scope.user.id + '/images');
+        var imageRef = new Firebase(baseUrl + 'users/' + $scope.user.uid + '/images');
         $scope.images = $firebaseArray(imageRef);
         console.log($scope.images);
       });

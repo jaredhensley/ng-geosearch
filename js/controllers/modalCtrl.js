@@ -6,7 +6,7 @@ angular.module('myApp').controller('modalCtrl', function ($scope) {
   $scope.testeThing = function(thing) {
     console.log('thing', thing);
   };
-  console.log($scope.addFav);
+
   setTimeout(function () {
 
     var map = new google.maps.Map(document.getElementById('street-canvas'), {});
