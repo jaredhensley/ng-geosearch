@@ -18,8 +18,6 @@ angular.module('myApp').service('fbService', function ($firebaseArray, $firebase
 
     authObj.$authWithPassword(userObj).then(function (response) {
 
-      console.log('in the database');
-      console.log(response);
 
     });
 
@@ -34,7 +32,6 @@ angular.module('myApp').service('fbService', function ($firebaseArray, $firebase
       newUser.uid = userData.uid;
       newUser.$save();
       authObj.$authWithPassword(userObj).then(function (response) {
-        console.log(response);
       })
 
     });
@@ -43,16 +40,12 @@ angular.module('myApp').service('fbService', function ($firebaseArray, $firebase
 
   authObj.$onAuth(function (response) {
 
-    console.log(response);
     if (response) {
-      console.log('authenticated');
       $state.go('home');
 
 
     } else {
-      console.log('not authenticated');
       if ($state) {
-        console.log('testfdfdsfdsf');
         $state.go('sign-in');
       }
 
@@ -62,7 +55,6 @@ angular.module('myApp').service('fbService', function ($firebaseArray, $firebase
 
   this.logout = function (userObj) {
     authObj.$unauth();
-    console.log('logged out');
 
   }
 
