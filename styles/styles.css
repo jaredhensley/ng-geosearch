@@ -346,3 +346,26 @@
    width: 95%
  }*/
     }
+    
+    form.user-log-reg {
+      margin: 50px auto 0;
+      text-align: center;
+    }
+    
+    form.user-log-reg input {
+      border-radius: 5px;
+      border: 2px solid #50514F;
+      padding: 5px;
+    }
+    
+    form.user-log-reg button {
+      padding: 5px;
+      border: 2px solid #50514F;
+      background-color: white;
+      border-radius: 5px;
+    }
+    
+    .signup-copy,
+    .reg-copy {
+      text-align: center;
+    }

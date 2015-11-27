@@ -15,24 +15,26 @@ angular.module('myApp').service('fbService', function ($firebaseArray, $firebase
   }
 
   this.login = function (userObj) {
-
+    console.log('line 18 in fb service userObj', userObj);
     authObj.$authWithPassword(userObj).then(function (response) {
 
-
+      console.log(response);
     });
 
   }
 
   this.register = function (userObj) {
+    console.log(userObj);
     authObj.$createUser(userObj).then(function (userData) {
-
+      console.log(userData);
       var usersRef = new Firebase(baseUrl + 'users/' + userData.uid);
       var newUser = $firebaseObject(usersRef);
       newUser.email = userObj.email;
       newUser.uid = userData.uid;
       newUser.$save();
       authObj.$authWithPassword(userObj).then(function (response) {
-      })
+        console.log('testttt');
+      });
 
     });
 
@@ -55,6 +57,7 @@ angular.module('myApp').service('fbService', function ($firebaseArray, $firebase
 
   this.logout = function (userObj) {
     authObj.$unauth();
+    $state.go('sign-in');
 
   }
 
