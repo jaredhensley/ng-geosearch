@@ -159,7 +159,7 @@
       display: inline-block;
       vertical-align: middle;
       font-size: 1rem;
-      max-width: 50%;
+      /* max-width: 50%;*/
       overflow: hidden;
       max-height: 100%;
     }
@@ -296,7 +296,7 @@
     }
     
     .modal-right-bottom .user {
-      width: 25%;
+      width: 30%;
       height: auto;
       text-align: center;
       display: inline-block;
@@ -316,7 +316,7 @@
     
     .modal-right-bottom .text {
       margin-left: 10px;
-      width: 70%;
+      width: 65%;
       display: inline-block;
       overflow-y: scroll;
       vertical-align: middle;
