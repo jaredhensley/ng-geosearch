@@ -5,8 +5,8 @@
       <button class="submit-btn" type="submit" ng-click="getCoords(searchTerm)">submit</button>
     </form>
     <div id='location-canvas'></div>
-    <div>
-      <main-directive images="images" add-fav="addFav(url)" data="data" class="results" ng-repeat="data in datas"></main-directive>
+    <div class="results">
+      <main-directive images="images" add-fav="addFav(url)" data="data" ng-repeat="data in datas"></main-directive>
     </div>
   </div>
 </div>

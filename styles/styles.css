@@ -103,8 +103,7 @@
         }
         
         .results {
-          display: inline;
-          margin: 0 auto;
+          text-align: center;
         }
         
         .result-parent-template {
@@ -160,9 +159,9 @@
           display: inline-block;
           vertical-align: middle;
           font-size: 1rem;
-          /* max-width: 50%;*/
           overflow: hidden;
           max-height: 100%;
+          text-align: left;
         }
         
         div.likes {
@@ -379,6 +378,7 @@
         @media screen and (max-width: 780px) {
           .result-parent-template {
             width: 100%;
+            margin: 5px 0;
           }
           div.likes {
             font-size: 1.5em;
