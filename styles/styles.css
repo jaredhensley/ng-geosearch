@@ -368,12 +368,7 @@
           }
         }
         
-        @media screen and (min-width: 768px) {
-          .modal-dialog {
-            /*  height: 266.6666px;
-  width: 600px;*/
-          }
-        }
+        @media screen and (min-width: 768px) {}
         
         @media screen and (max-width: 780px) {
           .result-parent-template {
@@ -384,12 +379,7 @@
             font-size: 1.5em;
           }
         }
-        
-        @media screen and (max-width: 480px) {
-          /* .center {
-   width: 95%
- }*/
-        }
+        /*---PUTS THESE IN CORRECT SPOTS LATER---*/
         
         form.user-log-reg {
           margin: 50px auto 0;
