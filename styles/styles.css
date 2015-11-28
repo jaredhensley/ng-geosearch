@@ -190,20 +190,20 @@
         }
         /*---MODAL STYLES---*/
         
-        .large-Modal .modal-dialog {
-          width: 85%;
-          height: 100vh;
-          position: absolute;
-          top: 0;
-          bottom: 0;
-          left: 0;
-          right: 0;
-          margin: auto
-        }
-        
-        .modal {
-          top: 10%;
-        }
+    /*    .large-Modal .modal-dialog {
+      width: 85%;
+      height: 100vh;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto
+    }
+    
+    .modal {
+      top: 10%;
+    }*/
         
         .modal-right {
           float: right;
@@ -248,13 +248,6 @@
           float: left;
           word-wrap: break-word;
         }
-        /*  .modal-right-top-right-top .info button {
-    width: 25%;
-    height: 25%;
-  }*/
-        /* .modal.right-top-right-top p {
-   max-width: 100%;
- }*/
         
         .modal-right-top-right-top .poster {
           display: inline-block;
@@ -331,8 +324,7 @@
             font-size: 1.5em;
           }
         }
-        
-        @media screen and (max-width: 992px) {
+        /* @media screen and (max-width: 992px) {
           .modal-right-top-right-top .info {
             font-size: 90%;
           }
@@ -366,7 +358,7 @@
           .modal-dialog {
             width: 600px;
           }
-        }
+        }*/
         
         @media screen and (min-width: 768px) {}
         
