@@ -1,371 +1,425 @@
-    /*---GLOBAL STYLES---*/
-    
-    html,
-    body {
-      width: 100%;
-      height: 100%;
-      font-size: 16px;
-    }
-    
-    html {
-      box-sizing: border-box;
-    }
-    
-    *,
-    *:before,
-    *:after {
-      box-sizing: inherit;
-    }
-    
-    .center {
-      width: 80%;
-      margin: 0 auto;
-    }
-    
-    body {
-      font-family: 'Open Sans';
-      background-image: url('../images/billie_holiday.png');
-    }
-    /*--RESETS FOR MODAL INJECTION--*/
-    
-    .nav,
-    .pagination,
-    .carousel,
-    .panel-title a {
-      cursor: pointer;
-    }
-    /*---HEADER STYLES---*/
-    
-    header {
-      background-color: #247BA0;
-      width: 100%;
-      text-align: center;
-      padding: 10px;
-    }
-    
-    header > h1 {
-      margin: 0 0 5px 0;
-      color: white;
-      font-size: 3em;
-      height: 62px;
-      line-height: 62px;
-      font-weight: 400;
-    }
-    
-    #sign-up,
-    #sign-in,
-    #logout {
-      background-color: white;
-      border: 2px solid #50514F;
-    }
-    /*---INPUT BOX STYLES---*/
-    
-    form.input-form {
-      margin: 10px;
-      text-align: center;
-    }
-    
-    form.input-form > input {
-      width: 50%;
-      padding: 10px;
-      text-align: center;
-      border-radius: 5px;
-      border: 3px solid #50514F;
-    }
-    
-    button.submit-btn {
-      border: 3px solid #50514F;
-      background-color: white;
-      padding: 10px;
-      border-radius: 5px;
-    }
-    /*---MAP STYLES---*/
-    
-    #location-canvas {
-      border: 3px solid #50514F;
-      margin: 20px 0;
-      height: 400px;
-    }
-    
-    #street-canvas {
-      height: 400px;
-      width: 50%;
-      float: left;
-      border-bottom: 3px solid black;
-      border-top: 3px solid black;
-      border-left: 3px solid black;
-    }
-    /*---RESULT DIRECTIVE TEMPLATE STYLES---*/
-    
-    #test-button {
-      display: block;
-    }
-    
-    .results {
-      display: inline;
-      margin: 0 auto;
-    }
-    
-    .result-parent-template {
-      background-color: white;
-      width: 32%;
-      min-width: 300px;
-      height: auto;
-      border: 3px solid #50514F;
-      margin: 5px;
-      display: inline-block;
-      border-radius: 5px;
-    }
-    
-    .top-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: relative;
-      width: 100%;
-      background-color: #FFE066;
-      color: #50514F;
-    }
-    
-    .prof-pic {
-      display: flex;
-      justify-content: center;
-      width: 20%;
-      height: 100%;
-      border-radius: 100px;
-      vertical-align: middle;
-      padding: 5px;
-    }
-    
-    .prof-pic > img {
-      -webkit-box-flex: 1;
-      -webkit-flex-grow: 1;
-      -ms-flex-positive: 1;
-      flex-grow: 1;
-      width: 100%;
-      height: 100%;
-      border-radius: 100px;
-      display: inline-block;
-      vertical-align: middle;
-      padding: 5px;
-    }
-    
-    div.username {
-      -webkit-box-flex: 2;
-      -webkit-flex-grow: 2;
-      -ms-flex-positive: 2;
-      flex-grow: 2;
-      white-space: nowrap;
-      display: inline-block;
-      vertical-align: middle;
-      font-size: 1rem;
-      /* max-width: 50%;*/
-      overflow: hidden;
-      max-height: 100%;
-    }
-    
-    div.likes {
-      -webkit-box-flex: 1;
-      -webkit-flex-grow: 1;
-      -ms-flex-positive: 1;
-      flex-grow: 1;
-      display: inline-block;
-      color: #F25F5C;
-      max-width: 20%;
-      max-height: 100%;
-      font-size: 1.5em;
-    }
-    
-    div.likes > .like-counter {
-      color: #247BA0;
-    }
-    
-    div.result-image {
-      border-top: 1px solid #50514F;
-      max-width: 100%;
-    }
-    
-    div.result-image > img {
-      width: 100%;
-    }
-    /*---MODAL STYLES---*/
-    
-    .large-Modal .modal-dialog {
-      width: 85%;
-      height: 100vh;
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      margin: auto
-    }
-    
-    .modal {
-      top: 10%;
-    }
-    
-    .modal-right {
-      float: right;
-      height: 400px;
-      width: 50%;
-      background-color: white;
-    }
-    
-    .modal-right-top {
-      height: 200px;
-    }
-    
-    .modal-right-top-left {
-      width: 50%;
-      height: 200px;
-      float: left;
-    }
-    
-    .modal-right-top-left img {
-      height: 100%;
-      width: 100%;
-      border: 3px solid black;
-    }
-    
-    .modal-right-top-right {
-      width: 50%;
-      height: 200px;
-      float: right;
-    }
-    
-    .modal-right-top-right-top {
-      height: 100px;
-      border-top: 3px solid black;
-      border-right: 3px solid black;
-      border-bottom: 3px solid black;
-    }
-    
-    .modal-right-top-right-top .info {
-      display: inline-block;
-      width: 50%;
-      height: auto;
-      float: left;
-      word-wrap: break-word;
-    }
-    /*  .modal-right-top-right-top .info button {
+        /*---GLOBAL STYLES---*/
+        
+        html,
+        body {
+          width: 100%;
+          height: 100%;
+          font-size: 16px;
+        }
+        
+        html {
+          box-sizing: border-box;
+        }
+        
+        *,
+        *:before,
+        *:after {
+          box-sizing: inherit;
+        }
+        
+        .center {
+          width: 80%;
+          max-width: 1280px;
+          margin: 0 auto;
+        }
+        
+        body {
+          font-family: 'Open Sans';
+          background-image: url('../images/billie_holiday.png');
+        }
+        /*--RESETS FOR MODAL INJECTION--*/
+        
+        .nav,
+        .pagination,
+        .carousel,
+        .panel-title a {
+          cursor: pointer;
+        }
+        /*---HEADER STYLES---*/
+        
+        header {
+          background-color: #247BA0;
+          width: 100%;
+          text-align: center;
+          padding: 10px;
+        }
+        
+        header > h1 {
+          margin: 0 0 5px 0;
+          color: white;
+          font-size: 3em;
+          height: 62px;
+          line-height: 62px;
+          font-weight: 400;
+        }
+        
+        #sign-up,
+        #sign-in,
+        #logout {
+          background-color: white;
+          border: 2px solid #50514F;
+        }
+        /*---INPUT BOX STYLES---*/
+        
+        form.input-form {
+          margin: 10px;
+          text-align: center;
+        }
+        
+        form.input-form > input {
+          width: 50%;
+          padding: 10px;
+          text-align: center;
+          border-radius: 5px;
+          border: 3px solid #50514F;
+        }
+        
+        button.submit-btn {
+          border: 3px solid #50514F;
+          background-color: white;
+          padding: 10px;
+          border-radius: 5px;
+        }
+        /*---MAP STYLES---*/
+        
+        #location-canvas {
+          border: 3px solid #50514F;
+          margin: 20px 0;
+          height: 400px;
+        }
+        
+        #street-canvas {
+          height: 400px;
+          width: 50%;
+          float: left;
+          border-bottom: 3px solid black;
+          border-top: 3px solid black;
+          border-left: 3px solid black;
+        }
+        /*---RESULT DIRECTIVE TEMPLATE STYLES---*/
+        
+        #test-button {
+          display: block;
+        }
+        
+        .results {
+          display: inline;
+          margin: 0 auto;
+        }
+        
+        .result-parent-template {
+          background-color: white;
+          width: 32%;
+          min-width: 300px;
+          height: auto;
+          border: 3px solid #50514F;
+          margin: 5px;
+          display: inline-block;
+          border-radius: 5px;
+        }
+        
+        .top-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          position: relative;
+          width: 100%;
+          background-color: #FFE066;
+          color: #50514F;
+        }
+        
+        .prof-pic {
+          display: flex;
+          justify-content: center;
+          width: 20%;
+          height: 100%;
+          border-radius: 100px;
+          vertical-align: middle;
+          padding: 5px;
+        }
+        
+        .prof-pic > img {
+          -webkit-box-flex: 1;
+          -webkit-flex-grow: 1;
+          -ms-flex-positive: 1;
+          flex-grow: 1;
+          width: 100%;
+          height: 100%;
+          border-radius: 100px;
+          display: inline-block;
+          vertical-align: middle;
+          padding: 5px;
+        }
+        
+        div.username {
+          -webkit-box-flex: 2;
+          -webkit-flex-grow: 2;
+          -ms-flex-positive: 2;
+          flex-grow: 2;
+          white-space: nowrap;
+          display: inline-block;
+          vertical-align: middle;
+          font-size: 1rem;
+          /* max-width: 50%;*/
+          overflow: hidden;
+          max-height: 100%;
+        }
+        
+        div.likes {
+          -webkit-box-flex: 1;
+          -webkit-flex-grow: 1;
+          -ms-flex-positive: 1;
+          flex-grow: 1;
+          display: inline-block;
+          color: #F25F5C;
+          max-width: 20%;
+          max-height: 100%;
+          font-size: 1.5em;
+        }
+        
+        div.likes > .like-counter {
+          color: #247BA0;
+        }
+        
+        div.result-image {
+          border-top: 1px solid #50514F;
+          max-width: 100%;
+        }
+        
+        div.result-image > img {
+          width: 100%;
+        }
+        /*---MODAL STYLES---*/
+        
+        .large-Modal .modal-dialog {
+          width: 85%;
+          height: 100vh;
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          margin: auto
+        }
+        
+        .modal {
+          top: 10%;
+        }
+        
+        .modal-right {
+          float: right;
+          height: 400px;
+          width: 50%;
+          background-color: white;
+        }
+        
+        .modal-right-top {
+          height: 200px;
+        }
+        
+        .modal-right-top-left {
+          width: 50%;
+          height: 200px;
+          float: left;
+        }
+        
+        .modal-right-top-left img {
+          height: 100%;
+          width: 100%;
+          border: 3px solid black;
+        }
+        
+        .modal-right-top-right {
+          width: 50%;
+          height: 200px;
+          float: right;
+        }
+        
+        .modal-right-top-right-top {
+          height: 100px;
+          border-top: 3px solid black;
+          border-right: 3px solid black;
+          border-bottom: 3px solid black;
+        }
+        
+        .modal-right-top-right-top .info {
+          display: inline-block;
+          width: 50%;
+          height: auto;
+          float: left;
+          word-wrap: break-word;
+        }
+        /*  .modal-right-top-right-top .info button {
     width: 25%;
     height: 25%;
   }*/
-    /* .modal.right-top-right-top p {
+        /* .modal.right-top-right-top p {
    max-width: 100%;
  }*/
-    
-    .modal-right-top-right-top .poster {
-      display: inline-block;
-      width: 50%;
-      height: 100%;
-      float: left;
-    }
-    
-    .modal-right-top-right-top .poster-img {
-      width: 100%;
-      height: 100%;
-    }
-    
-    .modal-right-top-right-top img {
-      max-width: 100%;
-      max-height: 100%;
-      height: auto;
-    }
-    
-    .modal-right-top-right-bottom {
-      height: 100px;
-      border-bottom: 3px solid black;
-      border-right: 3px solid black;
-      overflow-y: scroll;
-    }
-    
-    .modal-right-bottom {
-      height: 200px;
-      border-bottom: 3px solid black;
-      border-right: 3px solid black;
-      border-left: 3px solid black;
-      overflow: scroll;
-    }
-    
-    .modal-right-bottom .comment {
-      width: 100%;
-      font-weight: 400;
-      border: 1px dashed white;
-    }
-    
-    .modal-right-bottom .user {
-      width: 30%;
-      height: auto;
-      text-align: center;
-      display: inline-block;
-      padding: 10px;
-    }
-    
-    .modal-right-bottom .user .username {
-      width: 100%;
-    }
-    
-    .modal-right-bottom .user img {
-      width: 100%;
-      height: auto;
-      margin: 5px;
-      border-radius: 100px;
-    }
-    
-    .modal-right-bottom .text {
-      margin-left: 10px;
-      width: 65%;
-      display: inline-block;
-      overflow-y: scroll;
-      vertical-align: middle;
-    }
-    /*---MEDIA QUERIES---*/
-    
-    @media screen and (max-width: 1200px) {
-      .result-parent-template {
-        width: 48%;
-      }
-      div.likes {
-        font-size: 1.5em;
-      }
-    }
-    
-    @media screen and (max-width: 780px) {
-      .result-parent-template {
-        width: 100%;
-      }
-      div.likes {
-        font-size: 1.5em;
-      }
-    }
-    
-    @media screen and (max-width: 480px) {
-      /* .center {
+        
+        .modal-right-top-right-top .poster {
+          display: inline-block;
+          width: 50%;
+          height: 100%;
+          float: left;
+        }
+        
+        .modal-right-top-right-top .poster-img {
+          width: 100%;
+          height: 100%;
+          overflow: hidden;
+        }
+        
+        .modal-right-top-right-top img {
+          max-width: 100%;
+          height: auto;
+        }
+        
+        .modal-right-top-right-bottom {
+          height: 100px;
+          border-bottom: 3px solid black;
+          border-right: 3px solid black;
+          overflow-y: scroll;
+        }
+        
+        .modal-right-bottom {
+          height: 200px;
+          border-bottom: 3px solid black;
+          border-right: 3px solid black;
+          border-left: 3px solid black;
+          overflow: scroll;
+        }
+        
+        .modal-right-bottom .comment {
+          width: 100%;
+          font-weight: 400;
+          border: 1px dashed white;
+        }
+        
+        .modal-right-bottom .user {
+          width: 30%;
+          height: auto;
+          text-align: center;
+          display: inline-block;
+          padding: 10px;
+        }
+        
+        .modal-right-bottom .user .username {
+          width: 100%;
+        }
+        
+        .modal-right-bottom .user img {
+          width: 100%;
+          height: auto;
+          margin: 5px;
+          border-radius: 100px;
+        }
+        
+        .modal-right-bottom .text {
+          margin-left: 10px;
+          width: 65%;
+          display: inline-block;
+          overflow-y: scroll;
+          vertical-align: middle;
+        }
+        /*---MEDIA QUERIES---*/
+        
+        @media screen and (max-width: 1200px) {
+          .result-parent-template {
+            width: 48%;
+          }
+          div.likes {
+            font-size: 1.5em;
+          }
+        }
+        
+        @media screen and (max-width: 992px) {
+          .modal-right-top-right-top .info {
+            font-size: 90%;
+          }
+          .modal-dialog {
+            width: 900px;
+          }
+        }
+        
+        @media screen and (max-width: 902px) {
+          .modal-right-top-right-top .info {
+            font-size: 90%;
+          }
+          .modal-dialog {
+            width: 800px;
+          }
+        }
+        
+        @media screen and (max-width: 806px) {
+          .modal-right-top-right-top .info {
+            font-size: 90%;
+          }
+          .modal-dialog {
+            width: 700px;
+          }
+        }
+        
+        @media screen and (max-width: 714px) {
+          .modal-right-top-right-top .info {
+            font-size: 90%;
+          }
+          .modal-dialog {
+            width: 600px;
+          }
+        }
+        
+        @media screen and (min-width: 768px) {
+          .modal-dialog {
+            /*  height: 266.6666px;
+  width: 600px;*/
+          }
+        }
+        
+        @media screen and (max-width: 780px) {
+          .result-parent-template {
+            width: 100%;
+          }
+          div.likes {
+            font-size: 1.5em;
+          }
+        }
+        
+        @media screen and (max-width: 480px) {
+          /* .center {
    width: 95%
  }*/
-    }
-    
-    form.user-log-reg {
-      margin: 50px auto 0;
-      text-align: center;
-    }
-    
-    form.user-log-reg input {
-      border-radius: 5px;
-      border: 2px solid #50514F;
-      padding: 5px;
-    }
-    
-    form.user-log-reg button {
-      padding: 5px;
-      border: 2px solid #50514F;
-      background-color: white;
-      border-radius: 5px;
-    }
-    
-    .signup-copy,
-    .reg-copy {
-      text-align: center;
-    }
+        }
+        
+        form.user-log-reg {
+          margin: 50px auto 0;
+          text-align: center;
+        }
+        
+        form.user-log-reg input {
+          border-radius: 5px;
+          border: 2px solid #50514F;
+          padding: 5px;
+        }
+        
+        form.user-log-reg button {
+          padding: 5px;
+          border: 2px solid #50514F;
+          background-color: white;
+          border-radius: 5px;
+        }
+        
+        .signup-copy,
+        .reg-copy {
+          text-align: center;
+        }
+        
+        .save-img-btn {
+          position: absolute;
+          top: 4px;
+          left: 50.3%;
+          background-color: green;
+          color: white;
+          border: 2px solid white;
+          border-radius: 10px;
+        }
