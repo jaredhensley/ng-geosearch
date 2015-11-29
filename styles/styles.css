@@ -204,7 +204,73 @@
         }
         /*---MODAL STYLES---*/
         
+<<<<<<< HEAD
         .low-res-img {
+=======
+        .large-Modal .modal-dialog {
+          width: 85%;
+          height: 100vh;
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          margin: auto
+        }
+        
+        .modal {
+          top: 10%;
+        }
+        
+        .modal-right {
+          float: right;
+          height: 400px;
+          width: 50%;
+          background-color: white;
+        }
+        
+        .modal-right-top {
+          height: 200px;
+        }
+        
+        .modal-right-top-left {
+          width: 50%;
+          height: 200px;
+          float: left;
+        }
+        
+        .modal-right-top-left img {
+          height: 100%;
+          width: 100%;
+          border: 3px solid black;
+        }
+        
+        .modal-right-top-right {
+          width: 50%;
+          height: 200px;
+          float: right;
+        }
+        
+        .modal-right-top-right-top {
+          height: 100px;
+          border-top: 3px solid black;
+          border-right: 3px solid black;
+          border-bottom: 3px solid black;
+        }
+        
+        .modal-right-top-right-top .info {
+          display: inline-block;
+          width: 50%;
+          height: auto;
+          float: left;
+          word-wrap: break-word;
+        }
+        
+        .modal-right-top-right-top .poster {
+          display: inline-block;
+          width: 50%;
+          height: 100%;
+>>>>>>> gh-pages
           float: left;
         }
         /*---MEDIA QUERIES---*/
