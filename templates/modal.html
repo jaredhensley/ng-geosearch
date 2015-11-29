@@ -3,49 +3,14 @@
 </div>
 <div class="thingy">
 
-  <div id='street-canvas'></div>
-  <div class="modal-right">
-    <div class="modal-right-top">
-      <div class="modal-right-top-left">
-        <a href="{{data.link}}" target="_blank"><img ng-src="{{data.images.low_resolution.url}}" alt=""></a>
-      </div>
-      <div class="modal-right-top-right">
-        <div class="modal-right-top-right-top">
-          <div class="info">
-
-            {{data.created_time * 1000 | date}} {{data.caption.from.username}}
-            <button class="save-img-btn" ng-click="addFav({url: data.images.standard_resolution.url})">Save Image</button>
-
-          </div>
-          <div class="poster">
-            <div class="poster-img">
-              <img src="{{data.caption.from.profile_picture}}" alt="">
-            </div>
-          </div>
-        </div>
-        <div class="modal-right-top-right-bottom">
-          {{data.caption.text}}
-        </div>
-      </div>
-    </div>
-    <div class="modal-right-bottom">
-      <div ng-repeat="comment in comments">
-        <div class="comment">
-          <div class="user">
-            <div class="username">
-              {{comment.from.username}}
-            </div>
-            <br>
-            <img src="{{comment.from.profile_picture}}" alt="">
-          </div>
-          <div class="text">
-            {{comment.text}}
-          </div>
-        </div>
-
-      </div>
-    </div>
+  <div class="map-container">
+    <div id='street-canvas'></div>
   </div>
+
+  <div class="low-res-img">
+    <a href="{{data.link}}" target="_blank"><img class="img-responsive" ng-src="{{data.images.low_resolution.url}}" alt=""></a>
+  </div>
+
 
 
 </div>

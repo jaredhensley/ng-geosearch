@@ -12,15 +12,9 @@ angular.module('myApp').directive('mainDirective', function ($uibModal) {
       elem.on('click', function () {
         elem.css('opacity', '.5');
         var modalInstance = $uibModal.open({
-          animation: scope.animationsEnabled,
+          animation: true,
           controller: 'modalCtrl',
           scope: scope,
-          /*windowClass: 'large-Modal',*/
-          // resolve: {
-          //   data: function () {
-          //     return scope.data;
-          //   }
-          // },
           templateUrl: 'templates/modal.html',
           size: 'lg'
         });
