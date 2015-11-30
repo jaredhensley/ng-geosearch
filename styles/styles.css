@@ -89,9 +89,8 @@
         }
         
         #street-canvas {
-          height: 400px;
-          width: 50%;
-          float: left;
+          min-height: 200px;
+          max-height: 400px;
           border-bottom: 3px solid black;
           border-top: 3px solid black;
           border-left: 3px solid black;
@@ -190,6 +189,11 @@
         }
         /*---MODAL STYLES---*/
         
+        .row {
+          margin-left: 0;
+          margin-right: 0;
+        }
+        
         .large-Modal .modal-dialog {
           width: 85%;
           height: 100vh;
@@ -200,15 +204,13 @@
           right: 0;
           margin: auto
         }
-        
-        .modal {
+        /*.modal {
           top: 10%;
         }
         
         .modal-right {
           float: right;
           height: 400px;
-          width: 50%;
           background-color: white;
         }
         
@@ -313,7 +315,7 @@
           display: inline-block;
           overflow-y: scroll;
           vertical-align: middle;
-        }
+        }*/
         /*---MEDIA QUERIES---*/
         
         @media screen and (max-width: 1200px) {
@@ -324,8 +326,7 @@
             font-size: 1.5em;
           }
         }
-        
-        @media screen and (max-width: 992px) {
+        /*@media screen and (max-width: 992px) {
           .modal-right-top-right-top .info {
             font-size: 90%;
           }
@@ -361,7 +362,7 @@
           }
         }
         
-        @media screen and (min-width: 768px) {}
+        @media screen and (min-width: 768px) {}*/
         
         @media screen and (max-width: 780px) {
           .result-parent-template {
