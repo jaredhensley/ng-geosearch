@@ -155,6 +155,7 @@
           -webkit-flex-grow: 2;
           -ms-flex-positive: 2;
           flex-grow: 2;
+          max-width: 180px;
           white-space: nowrap;
           display: inline-block;
           vertical-align: middle;
@@ -298,6 +299,7 @@
         
         .modal-right-bottom .user .username {
           width: 100%;
+          text-align: center;
         }
         
         .modal-right-bottom .user img {
@@ -316,7 +318,7 @@
         }
         /*---MEDIA QUERIES---*/
         
-        @media screen and (max-width: 1200px) {
+        @media screen and () @media screen and (max-width: 1200px) {
           .result-parent-template {
             width: 48%;
           }
@@ -344,11 +346,20 @@
         }
         
         @media screen and (max-width: 806px) {
+          .center {
+            width: 90%;
+          }
           .modal-right-top-right-top .info {
             font-size: 90%;
           }
           .modal-dialog {
             width: 700px;
+          }
+          form.input-form input {
+            width: 100%;
+          }
+          form.input-form button {
+            display: none;
           }
         }
         
@@ -356,8 +367,22 @@
           .modal-right-top-right-top .info {
             font-size: 90%;
           }
+          .modal {
+            top: 0;
+          }
           .modal-dialog {
-            width: 600px;
+            width: 80%;
+            margin: 10px auto;
+          }
+          #street-canvas {
+            float: none;
+            width: 100%;
+            height: 250px;
+          }
+          .modal-right {
+            float: none;
+            width: 100%;
+            height: 400px;
           }
         }
         
